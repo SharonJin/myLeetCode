@@ -6,7 +6,7 @@
 **use Newton's method**
 refer [Newton's method](https://en.wikipedia.org/wiki/Newton%27s_method)
 '''
-private static double sqrt(int num)
+        private static double sqrt(int num)
         {
             double x1 = (num * 1.0) / 2;
             double x2 = (x1 + (num / x1)) / 2;
@@ -15,7 +15,6 @@ private static double sqrt(int num)
                 x1 = x2;
                 x2 = (x1 + (num / x1)) / 2;
             }
-
             return x2;
         }
 '''
