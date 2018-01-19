@@ -3,7 +3,7 @@
 * [sqrt without using sqrt function](#sqrt-without-using-sqrt-function)
 
 ## sqrt without using sqrt function
-> use Newton's method
+** Method1: use Newton's method **
 refer [Newton's method](https://en.wikipedia.org/wiki/Newton%27s_method)
 ```csharp
 private static double sqrt(int num)
@@ -16,5 +16,28 @@ private static double sqrt(int num)
                 x2 = (x1 + (num / x1)) / 2;
         }
         return x2;
+}
+```
+
+** Method2 **
+```
+1 = 1  square of 1
+1 + 3 = 4 square of 2,,adding two times
+1 + 3 + 5 = 9 square of 3 adding three times
+```
+The code is:
+```csharp
+private static int sqrt2(int num)
+{
+    int x = 1;
+    int nextPlus = 1;
+    int result = 0;
+    while (x <= num)
+    {
+        result += 1;
+        nextPlus += 2;
+        x = x + nextPlus;
+    }
+    return result;
 }
 ```
